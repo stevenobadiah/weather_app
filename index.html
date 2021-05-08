@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Weather App</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Weather Guru</h1>
+        </header>
+        <main>
+            <img id='guru' src="images/guruCropped.png" alt="Guru on a Mountain">
+            <img id='sunLoader' src="images/sunIcon.png" alt="Sun Icon">
+            <div id="sections">
+                <section id='inputs'>
+                    <!--
+                    <div id='zipInputDiv'>
+                        <span class="labelSpan">Zipcode</span>
+                        <input id="zipInput" type="text" value="11710" maxlength="10">
+                        <p class="error" id="zipError" aria-live="polite"></p>
+                    </div>
+                    <div id='countryInputDiv'>
+                        <span class="labelSpan">Country Code</span>
+                        <input id="countryInput" type="text" value="US" required minlength="2" maxlength="3">
+                        <p class="error" id="countryError" aria-live="polite"></p>
+                    </div>
+                    -->
+                    <div id='cityInputDiv'>
+                        <span class="labelSpan">City</span>
+                        <input id="cityInput" type="text" value="New York City" required minlength="3" maxlength="15">
+                        <p class="error" id="cityError" aria-live="polite"></p>
+                    </div>
+                    <div id='unitsInputDiv'>
+                        <span class="labelSpan">Units</span>
+                        <select id="unitsInput" name="units">
+                            <option value="imperial">Imperial</option>
+                            <option value="metric">Metric</option>
+                        </select>
+                    </div>
+                    <button id="refreshBtn">Refresh</button>
+                    <p id="errorMessage"></p>
+                </section>
+                <section id='currentWeather'>
+                    <div id='cityInfo'>
+                        <h3 id='city'></h3>
+                        <h5 id='timezone'></h5>
+                        <p id='longitude'></p>
+                        <p id='latitude'></p>
+                        <p id='sunrise'></p>
+                        <p id='sunset'></p>
+                    </div>
+                    <div id=cityWeather>
+                        <h3 id='temp'></h3>
+                        <h5 id='feelsLike'></h5>
+                        <p id='tempMin'></p>
+                        <p id='tempMax'></p>
+                        <p id='pressure'></p>
+                        <p id='visibility'></p>
+                        <p id='windspeed'></p>
+                    </div>
+                </section>
+                <section id='weatherForecast' class='d-none'>
+                    <div id='forecastLabels'>
+                        <h5></h5>
+                        <p>Description:</p>
+                        <p>Low:</p>
+                        <p>High:</p>
+                    </div>
+                    <div class='day' id='day1'>
+                        <h5>Day 1</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                    <div class='day' id='day2'>
+                        <h5>Day 2</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                    <div class='day' id='day3'>
+                        <h5>Day 3</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                    <div class='day' id='day4'>
+                        <h5>Day 4</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                    <div class='day' id='day5'>
+                        <h5>Day 5</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                    <div class='day' id='day6'>
+                        <h5>Day 6</h5>
+                        <p class='description'></p>
+                        <p class='min'>Min</p>
+                        <p class='max'>Max</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>

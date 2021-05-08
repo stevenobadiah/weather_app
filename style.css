@@ -1,0 +1,130 @@
+/* This is the style of our error messages */
+
+.invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+.error {
+  display: none;
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  background-color: #900;
+  padding: 0.3em;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-image: url("images/swirls.jpg");
+}
+
+header {
+  height: 100px;
+  text-align: center;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+main {
+  width: 80%;
+  color: black;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 231, 200);
+}
+
+#sections {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+section {
+  align-self: center;
+  line-height: 1.2;
+}
+
+#inputs {
+  max-width: 265px;
+}
+
+#zipInput, #countryInput, #cityInput {
+  width: 140px;
+}
+
+p {
+  margin: 0;
+}
+
+#guru {
+  width: 30%;
+}
+
+.showForecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.day {
+  margin: 0 30px;
+}
+
+#sunLoader {
+  position: absolute;
+  width: 80px;
+  top: 10px;
+  right: 10px;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.labelSpan {
+  width: 120px;
+  display: inline-block;
+}
+
+#currentWeather {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#forecastLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
